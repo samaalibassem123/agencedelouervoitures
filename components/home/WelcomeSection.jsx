@@ -3,7 +3,7 @@ import React from "react";
 export default function WelcomeSection() {
   return (
     <div className=" absolute top-0 left-0 w-full flex flex-col gap-5 items-center justify-center h-svh">
-      <p className=" bg-white/20 backdrop-blur-md w-full text-center text-4xl p-2 text-white font-semibold">
+      <p className=" bg-white/20 backdrop-blur-md w-full text-center text-4xl p-5 text-white font-semibold">
         Bienvenue Dans La premiére agence de location de voiture électrique en
         Tunisie
       </p>
@@ -13,7 +13,7 @@ export default function WelcomeSection() {
         une large gamme de véhicules récents et soigneusement entretenus pour
         répondre à toutes vos exigences.
       </span>
-      <button className=" bg-white p-3 rounded-lg text-xl font-semibold hover:opacity-60 transition-all">
+      <button className=" bg-white p-3 rounded-lg text-xl font-semibold hover:opacity-90 transition-all">
         Commencer à louer
       </button>
 

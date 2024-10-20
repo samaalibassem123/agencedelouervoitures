@@ -7,7 +7,6 @@ import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
 import { motion } from "framer-motion";
 import { AnimateShowElement } from "@/utils/animation";
-import { redirect } from "next/navigation";
 
 export default function LoginFrom() {
   return (
@@ -15,11 +14,12 @@ export default function LoginFrom() {
       {/*Right side */}
       <div className="w-full h-svh bg-black md:flex hidden relative ">
         <video
-          className=" w-full h-full object-cover"
           autoPlay
           loop
           muted
           playsInline
+          className=" w-full h-full object-cover"
+          src="/Demo-Drive-Kiosk-FSD-No-Text.mp4"
         >
           <source src="/Demo-Drive-Kiosk-FSD-No-Text.mp4" type="video/mp4" />
         </video>

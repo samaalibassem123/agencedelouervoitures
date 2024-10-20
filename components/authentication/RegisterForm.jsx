@@ -26,6 +26,7 @@ export default function RegisterForm() {
           loop
           muted
           playsInline
+          src="/abF0uRhidP4hdUBc2Jmir_desktop.mp4"
         >
           <source src="/Demo-Drive-Kiosk-FSD-No-Text.mp4" type="video/mp4" />
         </video>

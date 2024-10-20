@@ -7,6 +7,7 @@ import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
 import { motion } from "framer-motion";
 import { AnimateShowElement } from "@/utils/animation";
+import { redirect } from "next/navigation";
 
 export default function LoginFrom() {
   return (
@@ -24,8 +25,6 @@ export default function LoginFrom() {
         </video>
       </div>
       {/*left side */}
-
-      <div class=" md:hidden absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"></div>
 
       <motion.div
         variants={AnimateShowElement}
@@ -50,7 +49,6 @@ export default function LoginFrom() {
               vous installer et vous accompagner pendant le trajet sur demande.
             </p>
           </div>
-
           <div>
             {/*login with credentials*/}
             <form
@@ -85,10 +83,12 @@ export default function LoginFrom() {
               </Button>
             </form>
           </div>
-
           {/*redirect to login */}
           <Link href={"/register"} className="underline bg-white p-1">
             Vous n avez pas un compte ?
+          </Link>{" "}
+          <Link href={"/test"} className="underline bg-white p-1">
+            test
           </Link>
         </motion.div>
       </motion.div>

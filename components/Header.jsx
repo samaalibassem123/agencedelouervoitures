@@ -14,7 +14,7 @@ export default function Header({ place }) {
     );
   } else {
     return (
-      <header className="flex items-center justify-between drop-shadow-md p-5 font-semibold shadow-md  sticky top-0 backdrop-blur-xl ">
+      <header className="flex items-center justify-between drop-shadow-md p-5 font-semibold shadow-md sticky top-0 z-30 backdrop-blur-xl ">
         <h1 className="text-lg">TESLA_ALVT</h1>
         <div className="flex items-center gap-2">
           <span className=" md:inline-block hidden">bassem samaali</span>

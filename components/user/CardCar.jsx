@@ -1,8 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import AnimatedNumber from "numbers-animation-react";
+import Link from "next/link";
 
-export default function CrardCar({ cardImg, cardTitle, prix }) {
+export default function CardCar({ cardImg, cardTitle, prix, userid, carid }) {
   const [showBut, setShowBut] = useState(false);
   return (
     <div
@@ -16,12 +17,17 @@ export default function CrardCar({ cardImg, cardTitle, prix }) {
       </h1>
       {showBut && (
         <div className="flex items-center flex-col gap-3 w-full">
-          <button
-            variant="primary"
-            className="transition-all md:w-[200px] w-full text-lg bg-white p-2 rounded-lg font-semibold"
+          <Link
+            href={`/${userid}/${carid}?carname=${cardTitle}&prix=${prix}&carimg=${cardImg}`}
           >
-            Louer
-          </button>
+            <button
+              variant="primary"
+              className="transition-all md:w-[200px] w-full text-lg bg-white p-2 rounded-lg font-semibold hover:opacity-90"
+            >
+              Louer
+            </button>
+          </Link>
+
           <div className="text-white text-2xl  flex items-center gap-3">
             <span className=" no-underline">Avec</span>
             <span className=" underline">

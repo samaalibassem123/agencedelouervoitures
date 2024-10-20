@@ -1,7 +1,10 @@
+"use client";
 import React from "react";
-import CrardCar from "./CrardCar";
-
-export default function Dashboard() {
+import CardCar from "./CardCar";
+import { motion } from "framer-motion";
+import { AnimateShowElement } from "@/utils/animation";
+export default function Dashboard({ userId }) {
+  //get cars information from the db
   const cars = [
     {
       carImg: "/Homepage-Model-Y-Desktop-US-v2.avif",
@@ -31,14 +34,25 @@ export default function Dashboard() {
   ];
   return (
     <div className="p-5 flex flex-col gap-3 w-full justify-center">
-      <h1 className="font-semibold text-3xl">Notre Gamme:</h1>
+      <h1 className="font-semibold text-xl m-2 text-center">
+        La premiere Agence de location de voiture électique en Tunisie Vous
+        represente Leur gamme
+      </h1>
       {cars.map((car, index) => (
-        <CrardCar
+        <motion.div
+          variants={AnimateShowElement}
+          initial="hidden"
+          animate="visible"
           key={index}
-          cardImg={car.carImg}
-          cardTitle={car.carTitle}
-          prix={car.prix}
-        />
+        >
+          <CardCar
+            cardImg={car.carImg}
+            cardTitle={car.carTitle}
+            prix={car.prix}
+            userid={userId}
+            carid={index}
+          />
+        </motion.div>
       ))}
     </div>
   );

@@ -62,11 +62,11 @@ export default function page(url) {
                   Vitesse maximale :
                 </strong>{" "}
                 <br />
-                jusqu'à 250 km/h Deux moteurs électriques (transmission
+                jusqu à 250 km/h Deux moteurs électriques (transmission
                 intégrale)
                 <br /> <strong>Équipements notables :</strong> <br /> Autopilot
-                de série Caméras de surveillance à 360° Système
-                d'infodivertissement Tesla Mises à jour logicielles à distance
+                de série Caméras de surveillance à 360° Système d
+                infodivertissement Tesla Mises à jour logicielles à distance
                 Climatisation bi-zone Accès à la recharge rapide via le réseau
                 Superchargeur Tesla Voulez-vous plus de détails sur un aspect
                 particulier du Model Y ?

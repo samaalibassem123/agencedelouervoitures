@@ -47,7 +47,7 @@ export default function WelcomeSection() {
           muted
           playsInline
         >
-          <source src="abF0uRhidP4hdUBc2Jmir_desktop.mp4" type="video/mp4" />
+          <source src="/abF0uRhidP4hdUBc2Jmir_desktop.mp4" type="video/mp4" />
         </video>
       </div>
     </div>

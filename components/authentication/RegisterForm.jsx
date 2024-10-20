@@ -27,7 +27,7 @@ export default function RegisterForm() {
           muted
           playsInline
         >
-          <source src="Demo-Drive-Kiosk-FSD-No-Text.mp4" type="video/mp4" />
+          <source src="/Demo-Drive-Kiosk-FSD-No-Text.mp4" type="video/mp4" />
         </video>
       </div>
 

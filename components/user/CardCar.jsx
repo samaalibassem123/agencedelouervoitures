@@ -22,7 +22,7 @@ export default function CardCar({ cardImg, cardTitle, prix, userid, carid }) {
           >
             <button
               variant="primary"
-              className="transition-all md:w-[200px] w-full text-lg bg-white p-2 rounded-lg font-semibold hover:opacity-90"
+              className="transition-all w-[200px]  text-lg bg-white p-2 rounded-lg font-semibold hover:opacity-90"
             >
               Louer
             </button>

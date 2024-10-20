@@ -2,10 +2,7 @@
 import React, { useState } from "react";
 import AnimatedNumber from "numbers-animation-react";
 
-export default function CrardCar({
-  cardImg = "/Homepage-Model-Y-Desktop-US-v2.avif",
-  cardTitle = "Model Y",
-}) {
+export default function CrardCar({ cardImg, cardTitle, prix }) {
   const [showBut, setShowBut] = useState(false);
   return (
     <div
@@ -29,7 +26,7 @@ export default function CrardCar({
             <span className=" no-underline">Avec</span>
             <span className=" underline">
               <AnimatedNumber
-                value={1000}
+                value={prix}
                 startValue={0}
                 duration={1000}
                 generateCommas={true}

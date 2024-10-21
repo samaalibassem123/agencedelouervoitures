@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { AnimateShowElement } from "@/utils/animation";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { DatePickerWithRange } from "@/components/user/DatePickerWithRange";
 
 export default function page(url) {
   //get information from the url
@@ -49,6 +50,13 @@ export default function page(url) {
                   <span className="text-lg font-semibold">{vitOut}</span>
                   <span className="text-sm">0-60 mph</span>
                 </div>
+              </div>
+            </div>
+            <div>
+              <div className="flex md:flex-row flex-col w-full  md:items-center gap-3">
+                <Label>Choisir votre Date:</Label>
+
+                <DatePickerWithRange />
               </div>
             </div>
 

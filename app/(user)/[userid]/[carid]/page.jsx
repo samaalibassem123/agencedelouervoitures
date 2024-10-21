@@ -25,8 +25,11 @@ export default function page(url) {
 
       <div className=" lg:grid md:grid-cols-4 h-svh flex flex-col">
         {/*left side*/}
-        <div className="col-span-3 border">
-          <img src={carimg} className="object-cover object-center" />
+        <div className="col-span-3 border overflow-hidden cursor-pointer">
+          <img
+            src={carimg}
+            className="object-cover object-center hover:scale-125 transition-all ease-in-out -z-20 "
+          />
         </div>
         {/*right side*/}
         <ScrollArea className="h-[80%]">
@@ -55,7 +58,6 @@ export default function page(url) {
             <div>
               <div className="flex md:flex-row flex-col w-full  md:items-center gap-3">
                 <Label>Choisir votre Date:</Label>
-
                 <DatePickerWithRange />
               </div>
             </div>

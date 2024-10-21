@@ -3,7 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "./ui/button";
 import { SiTesla } from "react-icons/si";
 
-export default function Header({ place }) {
+export default function Header({ place, styleEdit }) {
   if (place === "home") {
     return (
       <header className=" fixed top-0 w-full flex sm:flex-row flex-col sm:items-end gap-1  backdrop-blur-xl text-white bg-black/40 p-5">
@@ -19,7 +19,9 @@ export default function Header({ place }) {
     );
   } else {
     return (
-      <header className="flex items-center justify-between  p-5 font-semibold shadow-md sticky top-0 z-30 backdrop-blur-xl ">
+      <header
+        className={`flex items-center justify-between  p-5 font-semibold shadow-md z-30 backdrop-blur-xl ${styleEdit} `}
+      >
         <div className="flex items-center gap-3 ">
           <SiTesla className="size-10" />
           <div>

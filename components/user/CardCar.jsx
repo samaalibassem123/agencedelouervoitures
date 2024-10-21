@@ -3,7 +3,17 @@ import React, { useState } from "react";
 import AnimatedNumber from "numbers-animation-react";
 import Link from "next/link";
 
-export default function CardCar({ cardImg, cardTitle, prix, userid, carid }) {
+export default function CardCar({
+  cardImg,
+  ModelImg,
+  cardTitle,
+  Range,
+  TopSpeed,
+  vitOut,
+  prix,
+  userid,
+  carid,
+}) {
   const [showBut, setShowBut] = useState(false);
   return (
     <div
@@ -18,7 +28,7 @@ export default function CardCar({ cardImg, cardTitle, prix, userid, carid }) {
       {showBut && (
         <div className="flex items-center flex-col gap-3 w-full">
           <Link
-            href={`/${userid}/${carid}?carname=${cardTitle}&prix=${prix}&carimg=${cardImg}`}
+            href={`/${userid}/${carid}?carname=${cardTitle}&prix=${prix}&carimg=${cardImg}&modelimg=${ModelImg}&range=${Range}&topspeed=${TopSpeed}&vitout=${vitOut}`}
           >
             <button
               variant="primary"

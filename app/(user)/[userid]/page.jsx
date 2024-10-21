@@ -6,7 +6,7 @@ export default function page({ params }) {
   const userID = params.userid;
   return (
     <div>
-      <Header />
+      <Header styleEdit={"sticky top-0"} />
       <Dashboard userId={userID} />
     </div>
   );

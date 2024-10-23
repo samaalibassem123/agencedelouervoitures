@@ -32,7 +32,7 @@ export default function page(url) {
           />
         </div>
         {/*right side*/}
-        <ScrollArea className="h-[80%]">
+        <ScrollArea className="md:h-svh h-[80%]">
           <div className="flex h-full flex-col p-5 items-center justify-around gap-7 ">
             <div className="flex flex-col items-center gap-4 w-full">
               <h1 className=" font-semibold md:text-5xl text-2xl text-center ">
@@ -55,14 +55,25 @@ export default function page(url) {
                 </div>
               </div>
             </div>
-            <div>
-              <div className="flex md:flex-row flex-col w-full  md:items-center gap-3">
-                <Label>Choisir votre Date:</Label>
+
+            <div className="w-full">
+              <div className="flex flex-col w-full gap-3">
+                <Label className="text-md ">Choisir votre Date:</Label>
                 <DatePickerWithRange />
               </div>
             </div>
-
-            <div className="flex items-center justify-between border p-5 w-full">
+            <div className="flex flex-col gap-2 w-full">
+              <span className=" font-semibold">Démonstration:</span>
+              <video
+                className=" size-80 border ring-black rounded-md"
+                src="/Enregistrement 2024-10-22 191753.mp4"
+                muted
+                loop
+                playsInline
+                autoPlay
+              ></video>
+            </div>
+            <div className="flex items-center justify-between border rounded-md  p-5 w-full">
               <span className="text-lg font-semibold">{prix}DT</span>
               <button className="bg-blue-500 text-white p-5 rounded-lg text-lg hover:opacity-80 font-semibold">
                 Louer Maintenant

@@ -16,7 +16,7 @@ import {
 
 export function DatePickerWithRange({ className }) {
   const [date, setDate] = React.useState({});
-  console.log(date);
+
   return (
     <div className={cn("grid gap-2", className)}>
       <Popover>
@@ -46,6 +46,7 @@ export function DatePickerWithRange({ className }) {
         </PopoverTrigger>
         <PopoverContent className="w-auto p-0" align="start">
           <Calendar
+            className={" bg-black/20"}
             initialFocus
             mode="range"
             defaultMonth={date?.from}

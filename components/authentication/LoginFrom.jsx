@@ -11,7 +11,7 @@ import { AnimateShowElement } from "@/utils/animation";
 export default function LoginFrom() {
   return (
     <div className="grid md:grid-cols-2 w-full h-svh">
-      {/*Right side */}
+      {/*left side */}
       <div className="w-full h-svh bg-black md:flex hidden relative ">
         <video
           autoPlay
@@ -24,7 +24,7 @@ export default function LoginFrom() {
           <source src="/Demo-Drive-Kiosk-FSD-No-Text.mp4" type="video/mp4" />
         </video>
       </div>
-      {/*left side */}
+      {/*right side */}
 
       <motion.div
         variants={AnimateShowElement}

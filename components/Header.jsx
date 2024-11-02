@@ -2,7 +2,7 @@ import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "./ui/button";
 import { SiTesla } from "react-icons/si";
-
+import Link from "next/link";
 export default function Header({ place, styleEdit }) {
   if (place === "home") {
     return (
@@ -22,15 +22,17 @@ export default function Header({ place, styleEdit }) {
       <header
         className={`flex items-center justify-between  p-5 font-semibold shadow-md z-30 backdrop-blur-xl ${styleEdit} `}
       >
-        <div className="flex items-center gap-3 ">
-          <SiTesla className="size-10" />
-          <div>
-            <h1 className="text-xl">TESLA_ALVT</h1>
-            <span className=" md:inline-block hidden text-sm  text-gray-900">
-              Agence de Location de Voitures électique (Tesla) En Tunisie
-            </span>
+        <Link href="/">
+          <div className="flex items-center gap-3 ">
+            <SiTesla className="size-10" />
+            <div>
+              <h1 className="text-xl">TESLA_ALVT</h1>
+              <span className=" md:inline-block hidden text-sm  text-gray-900">
+                Agence de Location de Voitures électique (Tesla) En Tunisie
+              </span>
+            </div>
           </div>
-        </div>
+        </Link>
 
         <div className="flex items-center gap-2">
           <span className=" md:inline-block hidden">bassem samaali</span>

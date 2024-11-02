@@ -1,14 +1,11 @@
 "use client";
 import Header from "@/components/Header";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import React from "react";
-import { motion } from "framer-motion";
-import { AnimateShowElement } from "@/utils/animation";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { DatePickerWithRange } from "@/components/user/DatePickerWithRange";
+import { useState } from "react";
 
-export default function page(url) {
+export default function Page(url) {
   //get information from the url
   const userid = url.params.userid;
   const carid = url.params.carid;
@@ -19,11 +16,14 @@ export default function page(url) {
   const topSpeed = url.searchParams.topspeed;
   const vitOut = url.searchParams.vitout;
 
+  //nbjour
+  const [nbjour, setNbjour] = useState(0);
+
   return (
     <>
       <Header />
 
-      <div className=" lg:grid md:grid-cols-4 h-svh flex flex-col">
+      <form className=" lg:grid md:grid-cols-4 h-svh flex flex-col">
         {/*left side*/}
         <div className="col-span-3 border overflow-hidden cursor-pointer">
           <img
@@ -58,30 +58,28 @@ export default function page(url) {
 
             <div className="w-full">
               <div className="flex flex-col w-full gap-3">
-                <Label className="text-md ">Choisir votre Date:</Label>
-                <DatePickerWithRange />
+                <Label className="text-md ">Choisir Le nombre de jour:</Label>
+                <Input
+                  type="number"
+                  onChange={(e) => setNbjour(e.target.value)}
+                />
               </div>
             </div>
-            <div className="flex flex-col gap-2 w-full">
-              <span className=" font-semibold">Démonstration:</span>
-              <video
-                className=" size-80 border ring-black rounded-md"
-                src="/Enregistrement 2024-10-22 191753.mp4"
-                muted
-                loop
-                playsInline
-                autoPlay
-              ></video>
-            </div>
+
             <div className="flex items-center justify-between border rounded-md  p-5 w-full">
-              <span className="text-lg font-semibold">{prix}DT</span>
-              <button className="bg-blue-500 text-white p-5 rounded-lg text-lg hover:opacity-80 font-semibold">
+              <span className="text-lg font-semibold">
+                {prix * nbjour}DT/par {nbjour}
+              </span>
+              <button
+                type="submit"
+                className="bg-blue-500 text-white p-5 rounded-lg text-lg hover:opacity-80 font-semibold"
+              >
                 Louer Maintenant
               </button>
             </div>
           </div>
         </ScrollArea>
-      </div>
+      </form>
     </>
   );
 }

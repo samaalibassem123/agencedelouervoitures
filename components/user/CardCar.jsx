@@ -11,7 +11,6 @@ export default function CardCar({
   TopSpeed,
   vitOut,
   prix,
-  userid,
   carid,
 }) {
   const [showBut, setShowBut] = useState(false);
@@ -28,7 +27,7 @@ export default function CardCar({
       {showBut && (
         <div className="flex items-center flex-col gap-3 w-full">
           <Link
-            href={`/${userid}/${carid}?carname=${cardTitle}&prix=${prix}&carimg=${cardImg}&modelimg=${ModelImg}&range=${Range}&topspeed=${TopSpeed}&vitout=${vitOut}`}
+            href={`/user/${carid}?carname=${cardTitle}&prix=${prix}&carimg=${cardImg}&modelimg=${ModelImg}&range=${Range}&topspeed=${TopSpeed}&vitout=${vitOut}`}
           >
             <button
               variant="primary"

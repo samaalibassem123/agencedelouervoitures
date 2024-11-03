@@ -73,7 +73,6 @@ export default function Dashboard() {
             TopSpeed={car.TopSpeed}
             vitOut={car.vitOut}
             prix={car.prix}
-            userid={"user"}
             carid={index}
           />
         </motion.div>

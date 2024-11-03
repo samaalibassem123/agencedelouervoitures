@@ -88,9 +88,6 @@ export default function LoginFrom() {
           <Link href={"/register"} className="underline bg-white p-1">
             Vous n avez pas un compte ?
           </Link>{" "}
-          <Link href={"/test"} className="underline bg-white p-1">
-            test
-          </Link>
         </motion.div>
       </motion.div>
     </div>

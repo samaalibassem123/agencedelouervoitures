@@ -1,9 +1,14 @@
+"use server";
 import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "./ui/button";
 import { SiTesla } from "react-icons/si";
 import Link from "next/link";
-export default function Header({ place, styleEdit }) {
+import { auth } from "@/auth";
+import { Logout } from "@/actions/user";
+
+export default async function Header({ place, styleEdit }) {
+  const session = await auth();
   if (place === "home") {
     return (
       <header className=" fixed top-0 w-full flex sm:flex-row flex-col sm:items-end gap-1  backdrop-blur-xl text-white bg-black/40 p-5">
@@ -35,12 +40,12 @@ export default function Header({ place, styleEdit }) {
         </Link>
 
         <div className="flex items-center gap-2">
-          <span className=" md:inline-block hidden">bassem samaali</span>
+          <span className=" md:inline-block hidden">{session?.user?.name}</span>
           <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+            <AvatarImage src={session?.user?.image} alt="@shadcn" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
-          <form>
+          <form action={Logout}>
             <Button>Logout</Button>
           </form>
         </div>

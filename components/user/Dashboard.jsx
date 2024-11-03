@@ -3,7 +3,7 @@ import React from "react";
 import CardCar from "./CardCar";
 import { motion } from "framer-motion";
 import { AnimateShowElement } from "@/utils/animation";
-export default function Dashboard({ userId }) {
+export default function Dashboard() {
   //get cars information from the db
   const cars = [
     {
@@ -73,7 +73,7 @@ export default function Dashboard({ userId }) {
             TopSpeed={car.TopSpeed}
             vitOut={car.vitOut}
             prix={car.prix}
-            userid={userId}
+            userid={"user"}
             carid={index}
           />
         </motion.div>

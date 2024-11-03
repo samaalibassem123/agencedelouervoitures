@@ -7,6 +7,7 @@ import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
 import { motion } from "framer-motion";
 import { AnimateShowElement } from "@/utils/animation";
+import { SigninWithGoogle } from "@/actions/user";
 
 export default function LoginFrom() {
   return (
@@ -75,7 +76,7 @@ export default function LoginFrom() {
               </div>
             </form>
             {/*login with google*/}
-            <form action="" className="w-full bg-white">
+            <form action={SigninWithGoogle} className="w-full bg-white">
               <Button className="w-full border border-black" variant="primary">
                 <div className="flex items-center gap-2">
                   <span>Continue avec Google</span> <FcGoogle />

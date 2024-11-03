@@ -14,6 +14,7 @@ import {
 import { motion } from "framer-motion";
 import { AnimateShowElement } from "@/utils/animation";
 import { ScrollArea } from "../ui/scroll-area";
+import { SigninWithGoogle } from "@/actions/user";
 
 export default function RegisterForm() {
   return (
@@ -145,7 +146,7 @@ export default function RegisterForm() {
               </form>
               {/*login with google*/}
               <form
-                action=""
+                action={SigninWithGoogle}
                 className="flex items-center p-1 justify-center w-full bg-white"
               >
                 <Button
